@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #ffb300;
+  background: linear-gradient(288deg, #ffb300 0%, #ff9100 74%);
+}
+
+/* Barra de Navegacion */
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-toggler {
+  border-radius: 20%;
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .navItems {
+    border: solid 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: grey;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navItems {
+    font-size: 1.2rem;
+    background: -webkit-gradient(linear, right top, left top, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(247, 238, 238, 0.5))) 100% 98%/220% 2px no-repeat;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 50%, rgba(247, 238, 238, 0.5) 50%) 100% 98%/220% 2px no-repeat;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+  }
+  .navItems:hover {
+    background-position: 0 98%;
+    outline: none;
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+  }
+}
+
+/* Contenido Principal de Index*/
+.hero {
+  background-image: url(../img/FoodLoverBackground.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  position: relative;
+}
+
+.hero__Titulos {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #cf712e;
+  border-radius: 10px 10px 0 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 768px) {
+  .hero__Titulos {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: url(../img/FoodLoverBackgroundSmall.jpg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__Contenido iframe {
+    width: 640px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__Contenido iframe {
+    border-radius: 0 0 25px 25px;
+    width: 350px;
+    height: 300px;
+  }
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: 8%;
+  height: 10%;
+  margin-top: 40%;
+}
+
+@media (min-width: 768px) {
+  .carousel-control-next, .carousel-control-prev {
+    margin-top: 27%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-control-next, .carousel-control-prev {
+    margin-top: 30%;
+  }
+}
+
+.carousel-indicators {
+  width: 30%;
+  margin-left: 35%;
+  margin-bottom: 0.4rem;
+}
+
+/* Contenido Principal de la pagina Recetas Destacadas */
+.card__destacadas {
+  background-color: rgba(200, 200, 200, 0.9);
+  max-height: 45rem;
+  border-radius: 30px;
+  max-width: 22rem;
+}
+
+@media (min-width: 768px) {
+  .card__destacadas {
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+  }
+  .card__destacadas:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+.card__destacadas iframe {
+  width: 100%;
+}
+
+/* Contenido Principal de la pagina Recetas Nuevas */
+.card__nuevas {
+  background-color: rgba(200, 200, 200, 0.9);
+  max-height: 45rem;
+  border-radius: 30px;
+}
+
+@media (min-width: 768px) {
+  .card__nuevas {
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+  }
+  .card__nuevas:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@media (min-width: 768px) {
+  .card__nuevas {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .card__nuevas {
+    width: 43%;
+  }
+}
+
+@media (min-width: 576px) {
+  .card__nuevas img {
+    width: 80%;
+  }
+}
+
+.scroll-style {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.scroll-style::-webkit-scrollbar {
+  display: none;
+}
+
+/* Contenido Principal de la pagina de Comentarios */
+.comentarios {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: solid;
+  border-color: grey;
+}
+
+.comentarios__textarea {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: solid;
+  border-color: grey;
+  color: #ffffffe0;
+  resize: none;
+  height: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.comentarios__button {
+  border-radius: 20px;
+  background-color: #f68f0a;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.comentarios p {
+  color: #ffffffe0;
+}
+
+.separador {
+  border-bottom: solid 1px;
+  border-color: #ffffffe0;
+}
+
+/* Contenido Principal de la pagina de Contacto */
+.form {
+  background-color: #162a0dcc;
+  border-radius: 10px;
+}
+
+.form__labels {
+  color: #ffffffe0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form__inputs {
+  background-color: #ffffffe0;
+}
+
+.form .textarea {
+  border-radius: 5px;
+  resize: none;
+  height: 100px;
+}
+
+.form__archivo {
+  width: 100%;
+  background-color: #ffffffe0;
+  border-radius: 10px;
+}
+
+.form__button {
+  border-radius: 20px;
+  background-color: #f68f0a;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .form__button {
+    width: 17%;
+  }
+}
+
+@media (min-width: 768px) {
+  .form__button {
+    width: 12%;
+  }
+}
+
+.form__texto {
+  color: #ffffffe0;
+  font-size: 20px;
+}
+
+/* Footer */
+.footer {
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer a {
+  text-decoration: none;
+  cursor: context-menu;
+}
+
+.footer img {
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.footer img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer__aboutUs, .footer__aboutUs:hover {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 768px) {
+  .footer__aboutUs:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__aboutUs:hover {
+    background-position: 0 98%;
+    outline: none;
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__aboutUs, .footer__aboutUs:hover {
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    font-size: 1.4rem;
+  }
+}
+
+.offcanvas {
+  background-color: rgba(200, 200, 200, 0.9);
+}
+
+.offcanvas-body {
+  font-size: medium;
+}
+
+.stickyArrow img {
+  z-index: 100;
+  position: fixed;
+  right: 1rem;
+  bottom: 4rem;
+}
+/*# sourceMappingURL=styles.css.map */

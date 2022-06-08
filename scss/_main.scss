@@ -1,0 +1,235 @@
+body {
+	font-family: 'Rubik', sans-serif;
+	background: rgb(255,179,0);
+	background: linear-gradient(288deg, rgba(255,179,0,1) 0%, rgba(255,145,0,1) 74%);
+}
+
+/* Barra de Navegacion */
+nav {
+	background-color: $color-negro-50;
+}
+
+.navbar-toggler {
+    border-radius: 20%;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.navItems {
+    @media (max-width: 768px) {
+        border: solid 1px;
+		background-color: $color-negro-50;
+		border-color: grey;
+		border-radius: 10px;  
+    }
+    @media (min-width: 768px) {
+        font-size: 1.2rem;
+        background: linear-gradient(to left, rgba(255,255,255,0) 50%, rgba(247, 238, 238, 0.5) 50%) 100% 98% / 220% 2px no-repeat;
+        transition: all .25s ease-in-out;
+        &:hover {
+            @include links-hover-effect;  
+        }
+    }
+}
+
+/* Contenido Principal de Index*/
+.hero {
+	background-image: url(../img/FoodLoverBackground.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+	max-width: 100%;
+	position: relative;
+    &__Titulos {
+        font-weight: map-get($font-weights, semibold);
+        font-size: 1.4rem;
+        color: #cf712e;
+        border-radius: 10px 10px 0 0;
+        background-color: $color-negro-70;
+        @media (min-width: 768px) {
+            font-size: 2rem; 
+        }
+    }
+    @media (max-width: 768px) {
+        background-image: url(../img/FoodLoverBackgroundSmall.jpg);
+    }
+}
+
+.hero__Contenido {
+    iframe {
+        @media (max-width: 1200px) {
+            @include video-size(640px,400px);
+        }
+        @media (max-width: 768px) {
+            border-radius: 0 0 25px 25px;
+            @include video-size(350px,300px);
+        }
+    }
+}
+
+.carousel-control-next {
+    width: 8%;
+    height: 10%;
+    margin-top: 40%;
+    @media (min-width: 768px) {
+        margin-top: 27%;
+    }
+    @media (min-width: 1200px) {
+        margin-top: 30%;
+    }
+}
+
+.carousel-control-prev {
+    @extend .carousel-control-next;
+}
+
+.carousel-indicators {
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 0.4rem;
+}
+
+/* Contenido Principal de la pagina Recetas Destacadas */
+.card__destacadas {
+	@include cards;
+    max-width: 22rem;
+    iframe {
+        width: 100%;
+    }
+}
+
+/* Contenido Principal de la pagina Recetas Nuevas */
+.card__nuevas {
+    @include cards;
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+    @media (min-width: 992px) {
+        width: 43%;
+    }
+    img {
+        @media (min-width: 576px) {
+            width: 80%;
+        }
+    }
+}
+
+.scroll-style {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* Contenido Principal de la pagina de Comentarios */
+.comentarios {
+    @include bordered-textarea;
+    &__textarea {
+        @include bordered-textarea;
+        color: $color-blanco-opaco;
+        resize: none;
+        height: 100px;
+        font-size: 1rem;
+        font-weight: map-get($font-weights, semibold);
+    }
+    &__button {
+        @include button;
+    }
+    p {
+        color: $color-blanco-opaco;
+    }
+}
+
+.separador {
+	border-bottom: solid 1px;
+	border-color: $color-blanco-opaco;
+}
+
+/* Contenido Principal de la pagina de Contacto */
+.form {
+    background-color: #162a0dcc;
+    border-radius: 10px;
+    &__labels {
+        color: $color-blanco-opaco;
+        font-size: 20px;
+        font-weight: map-get($font-weights, medium);
+    }
+    &__inputs {
+        background-color: $color-blanco-opaco;
+    }
+    .textarea {
+        border-radius: 5px;
+        resize: none;
+        height: 100px;
+    }
+    &__archivo {
+        width: 100%;
+        background-color: $color-blanco-opaco;
+        border-radius: 10px;
+    }
+    &__button {
+        @include button;
+        @media (min-width: 576px) {
+            width: 17%;
+        }
+        @media (min-width: 768px) {
+            width: 12%;
+        }
+    }
+    &__texto {
+        color: $color-blanco-opaco;
+        font-size: 20px;
+    }
+}
+
+/* Footer */
+.footer {
+	font-weight: map-get($font-weights, semibold);
+	font-size: 1.2rem;
+	background-color: $color-negro-30;
+    a {
+        text-decoration: none;
+	    cursor: context-menu;
+    }
+    img {
+        transition: $transition-250;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__aboutUs {
+        color: rgba(255,255,255,.55);
+        &:hover {
+            @extend .footer__aboutUs;
+            @media (max-width: 768px) {
+                transform: scale(1.1);
+            }
+            @media (min-width: 768px) {
+                @include links-hover-effect;
+            }
+        }
+        @media (min-width: 768px) {
+            transition:  $transition-250;
+        }
+    }
+    @media (min-width: 768px) {
+        font-size: 1.4rem;
+    }
+}
+
+.offcanvas {
+    background-color: $color-gris-claro;
+    &-body {
+        font-size: medium;
+    }
+}
+
+.stickyArrow img {
+	z-index: 100;
+	position: fixed;
+	right: 1rem;
+	bottom: 4rem;
+}

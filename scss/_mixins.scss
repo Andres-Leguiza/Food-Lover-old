@@ -1,0 +1,36 @@
+@mixin video-size ($width,$height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin links-hover-effect {
+    background-position: 0 98%;
+    outline: none;
+    transition: $transition-250;
+}
+
+@mixin cards {
+    background-color: $color-gris-claro;
+    max-height: 45rem;
+    border-radius: 30px;
+    @media (min-width: 768px) {
+        transition: $transition-500;
+        &:hover {
+            transform: scale(1.05);  
+        }
+    }
+}
+
+@mixin button {
+    border-radius: 20px;
+    background-color: #f68f0a;
+    opacity: 0.8;
+    font-size: 18px;
+    font-weight: map-get($font-weights, semibold);
+}
+
+@mixin bordered-textarea {
+    background-color: $color-negro-70;
+	border: solid;
+	border-color: grey;
+}
